@@ -1,0 +1,188 @@
+<div>test</div>
+<script>
+//    var mas = [];
+//    var obj = {a:1,b:2};
+//    var arr = Object.values(obj);
+//    console.log(arr);
+    
+    //ES-6
+    
+//    const MY_CONST = 10;
+    
+//    let age = 25;
+//    if(1){
+//        let age = 30;
+//        console.log(age);
+//    }
+//    console.log(age);
+    
+//    function info(result){
+//        let firstName;
+//        let birthDay;
+//        if(result){
+//            firstName = "Ivan";
+//            birthDay = 1990;
+//        }
+//        console.log(firstName + ", рожденный в " + birthDay + "...");
+//    }
+//    info(1);
+    
+//    let i = 0;
+//    for(let i = 1;i<=3;i++){
+//        console.log(i);
+//    }
+//    console.log(i);
+    
+    
+//   Template literals 
+    
+//let firstName = "Иван";
+//let lastName = "Иванов";
+//const YEAR = 1990;
+//    
+//function calcAge(year){
+//    let date = new Date();
+//    return date.getFullYear() - year;//получили возраст
+//}
+//
+//const INFO = `${firstName} ${lastName}, рожденный в ${YEAR}, ему ${calcAge(YEAR)}`;
+//console.log(INFO);
+//    
+//console.log(INFO.indexOf("рожденный"));
+//console.log(INFO.endsWith(30));
+//console.log(INFO.repeat(5));
+    
+//Стрелочные функции
+    
+//let sum = function(a,b){
+//    return a + b;
+//}
+
+//const sum = (a,b) => a + b;
+//console.log(sum(1,2));
+    
+//const test = (a,b = 1) => {
+//    if(!isNaN(a)){
+//        console.log(a + b);
+//    }
+//}
+//test(1); 
+    
+    
+//let calcAge2 = year => new Date().getFullYear() - year;    
+//console.log(calcAge2(1999));    
+    
+
+//У стрелочных функций есть важное отличие от классических - они не создают
+//собственного контекста, а используют контекст родителя
+    
+//let box = {
+//    color: 'green',
+//    position: 1,
+//    clickMe: function(){
+//        document.querySelector("div").addEventListener("click",function(){
+//            console.log(this);
+//            console.log(`Это контейнер цветом ${this.color}, №${this.position}`);
+//        });
+//    }
+//}    
+//let box = {
+//    color: 'green',
+//    position: 1,
+//    clickMe: function(){
+//        document.querySelector("div").addEventListener("click",()=>{
+//            console.log(this);
+//            console.log(`Это контейнер цветом ${this.color}, №${this.position}`);
+//        });
+//    }
+//}    
+//
+//box.clickMe();
+    
+// let s = 0;
+//[10,20,30].forEach(item => {
+//    s += item;
+//});
+//    
+//alert(s);
+    
+ 
+//Деструктуризация позволяет извлечь части из составных данных. Цель - сокращение кода
+    
+//let mas = ["Иван",30];
+////let name = mas[0];
+////let age = mas[1];
+//    
+//let [name,age] = mas;    
+    
+
+let obj = {
+    firstName : "Иван",
+    lastName : "Иванов",
+    professions : ['программист','admin']
+}
+    
+//let {firstName : name,lastName,professions: [p1,p2]} = obj;
+//console.log(name);
+//console.log(lastName);
+//console.log(p1);
+//console.log(p2);
+    
+//let f = year => {
+//    const age = new Date().getFullYear() - year;
+//    return [age,65 - age];
+//}    
+//
+//let [currentAge, left] = f(1990);
+//console.log(`Возраст ${currentAge}, до пенсии осталось ${left}`);
+//
+
+
+//Оператор REST - упаковка элементов в массив
+//Оператор SPREAD - используется для разделения коллекций на отдельные элементы (распаковка)
+    
+// function restTest(a,b,...c){
+//     console.log(c);
+// }   
+//console.log(restTest(1,2,3,45,5,3));
+    
+//SPREAD    
+    
+//const TEST = [3,5,5,6,8,95,22];
+//console.log(Math.max(...TEST));
+ 
+//Клонирование свойств массива
+//let arr = ['one','two'];
+//let arr2 = ['first',...arr,'last'];
+//console.log(arr2);   
+//let s = 0;
+//let calcArgs = (a,b,c,d, ...test) => {
+//    s += a + b + c + d;
+//    test.forEach((item)=>s+=item);
+//    return s;
+//}
+//const arr = [1,2,3,4,5,6,7,8];
+//console.log(calcArgs(...arr));
+
+//Метод arr.map(func) - используется для трансформации массива. Он создает новый массив,
+//который будет состоять из результатов функции func
+
+let langs = ['js','php','Java'];
+let size = langs.map(item => item.length)
+console.log(size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+</script>
