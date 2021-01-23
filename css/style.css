@@ -5,6 +5,13 @@ body {
   background: white;
 }
 
+.invalid{
+  border: 2px solid red;
+}
+.valid{
+  border: 2px solid green;
+}
+
 .top {
   margin: 0 auto;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(8.84%, #EBF3FB), color-stop(31.12%, rgba(152, 195, 232, 0)));
