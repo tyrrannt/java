@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Интернет-магазин</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Интернет-магазин GeekShop</title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
 
 <body>
     <div class="top">
@@ -25,18 +26,63 @@
 
     <!-- Основной блок -->
     <main>
-        <div class="products"></div>
+        <div class="col">
+            <article>
+                <h3>Пример текста</h3>
+                <p class="src">Многие сталкивались с ситуацией, когда рассказать о предстоящем успехе оказывалось невозможно. Мы
+                    легко скажем, что 'он
+                    победит', но как же сообщить эту информацию о себе самом? Я 'побежу' или 'победю'? Нормой является
+                    описательная
+                    конструкция 'стану победителем'. А причина явления - существование в языке недостаточных глаголов, у которых
+                    нет
+                    некоторых форм. В данном случае - 1 лица единственного числа.</p>
+                <p class="src">Апостроф (ударение на последний слог) в русском языке встречается не часто, если не считать
+                    сохранившихся со времён Октябрьской Революции об'явлений и вывесок над под'ездами. Другим примером
+                    использования
+                    этого знака, похожего на 'запятую вверху', являются известные имена и фамилии французского (Жанна д’Арк,
+                    д’Артаньян, д'Эон, Д'арре) и британского (О'Коннор, О'Хара, О'Нил, О'Хиггинс, О'Куинн, О'Кейси) , а также
+                    названия различных мест, начиная государством Кот д'Ивуар, продолжая провинциями и коммунами Кот-д’Ор,
+                    Кот-д’Армор, Л'Умо, Пон-л’Эвек, Л'Иль-сюр-ла-Сорг, Морро-д'Оро, Морро-д'Альба, Л'Алькерия-д'Аснар (Испания)
+                    ,
+                    заканчивая церквями и знаменитыми дворцами: Чель д’Оро.</p>
+            </article>
+        
+            <button id="check">ЗАМЕНИТЬ</button>
+        </div>
+        <div class="col">
+            <form action="#" id="myForm">
+                <div class="form-group">
+                    <label id="name">
+                        <input type="text" name="name" placeholder="Your name">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="phone">
+                        <input type="tel" name="phone" placeholder="+7(000)000-00-00">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="email">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label id="message">
+                        <textarea placeholder="Your message here" name="message"></textarea>
+                    </label>
+                </div>
+                <button id="checkMe">Отправить</button>
+            </form>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; GeekShop {% now 'Y' %}</p>
+            <p class="m-0 text-center text-white">Copyright &copy; GeekShop 2021</p>
         </div>
     </footer>
-    <script src="js/main.js"></script>
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>
