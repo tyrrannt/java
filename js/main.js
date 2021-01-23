@@ -14,11 +14,13 @@ function check(elem, event) {
     for (let el of elem) {
         if (el[1].match(el[2])) {
             field = document.getElementsByName(el[0])[0];
-            field.classList.replace('invalid', 'valid');
+            field.classList.remove('invalid');
+            field.classList.add('valid');
         }
         else {
             field = document.getElementsByName(el[0])[0];
-            field.classList.replace('valid', 'invalid');
+            field.classList.remove('valid');
+            field.classList.add('invalid');
             event.preventDefault();
         }
     }
