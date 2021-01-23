@@ -1,5 +1,34 @@
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
+class Good {
+    constructor(url, container, jsonFile, objectItem) {
+        this.url = url;
+        this.container = container;
+        this.obj = objectItem;
+
+        this.goods = [];
+        this.allGoods = [];
+        this._init();
+    }
+    fetchGood() {
+        return fetch(`${API_URL}/${jsonFile}`)
+            .then(result => result.json())
+            .catch(error => {
+                console.log('error');
+            })
+    }
+    render() {
+        const elem = document.querySelector(this.container);
+        for (let item of this.goods) {
+            const itemObj = new this.obj(item);//мы сделали объект товара либо CartItem, либо ProductItem
+            console.log(itemObj);
+            this.allGoods.push(itemObj);
+            elem.insertAdjacentHTML('beforeend', itemObj.render());
+        }
+    }
+
+}
+
 class ProductDB {
     fetchProducts() {
         return fetch(`${API_URL}/catalogData.json`)
@@ -9,7 +38,6 @@ class ProductDB {
             })
     }
 }
-
 
 class ProductsList {
     constructor(container = '.products') {
@@ -48,12 +76,11 @@ class ProductsList {
 }
 
 class ProductItem {
-    constructor(product, img = 'https://placehold.it/200x150') {
+    constructor(product) {
         this.title = product.product_name;
         this.price = product.price;
         this.id = product.id_product;
         this.img = `img/${product.id_product}.jpg`;
-
     }
 
     render() {
@@ -66,9 +93,14 @@ class ProductItem {
     }
 }
 
+function footer_date() {
+    let dt = new Date;
+    return document.querySelector('.container').insertAdjacentHTML("beforeend", `<p class="m-0 text-center text-white">Copyright &copy; GeekShop ${dt.getFullYear()}</p>`)
+}
+
 let list = new ProductsList();
 list.render();
-
+footer_date()
 
 class Baskets {
     add_good() {
