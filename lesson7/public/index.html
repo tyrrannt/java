@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Интернет-магазин GeekShop</title>
+    <link href="css/style.css" rel="stylesheet">
+
+<body>
+    <div id="app">
+    <div class="top">
+        <div class="top-box">
+            <div class="top-box-header">
+                <h1>GeekShop</h1>
+                <p>+7 000 322-22-23</p>
+            </div>
+            <!-- Верхнее меню -->
+            <div class="top-box-menu good">
+                <search-form></search-form>
+                <good ref="good"></good>
+                <!-- <button class="top-box-button" type="button" @click="showgood = !showgood">Корзина</button>
+                            <div class="good-block" v-show="showgood">
+                                <p v-if="!goodItems.length">Корзина пуста</p>
+                                <div class="good-item" v-for="item of goodItems" :key="item.id_product">
+                        <div class="product-bio">
+                            <img v-bind:src="'img/'+item.id_product+'sm.jpg'" alt="Some img">
+                            <div class="product-desc">
+                                <div class="product-title">{{ item.product_name }}</div>
+                                <div class="product-quantity">Quantity: {{ item.quantity }}</div>
+                                <div class="product-single-price">$ {{ item.price }} each</div>
+                            </div>
+                        </div>
+                        <div class="right-block">
+                            <div class="product-price">{{item.quantity*item.price}}</div>
+                            <button class="del-btn" @click="remove(item)">&times;</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Основной блок -->
+    <main>
+        <!-- <div class="products">
+            <div class="product-item" v-for="product of filtered" :key="product.id_product">
+                <img v-bind:src="'img/'+product.id_product+'.jpg'" alt="Some img">
+                <div class="desc">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.price}}</p>
+                    <button class="buy-btn" @click="addProduct(product)">Купить</button>
+                </div>
+            </div>
+        </div> -->
+        <products ref="products"></products>
+    </main>
+    </div>
+
+
+    
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container"></div>
+    </footer>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
